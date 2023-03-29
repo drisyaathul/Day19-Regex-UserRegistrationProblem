@@ -21,11 +21,18 @@ public class UserRegistrationProblem {
         else
             System.out.println("Invalid LastName");
 //UC3:
-        Pattern pattern3 = Pattern.compile("^[a-z]*[.][a-z0-9]*([@][a-z]{5}[.][a-z]{3})$");
-        Matcher matcher3 = pattern3.matcher("drisya.athul809@gmail.com");
+        Pattern pattern3 = Pattern.compile("^[a-z0-9]*[.]?[a-z0-9]*(@[a-z]{5}[.][a-z]{3})$");
+        Matcher matcher3 = pattern3.matcher("drisya.athul8@gmail.com");
         if (matcher3.matches())
             System.out.println("Valid Email");
         else
             System.out.println("Invalid Email");
+//UC4:
+        Pattern pattern4 = Pattern.compile("^(\\+?\\d{1,3}\s\\d{10})$");
+        Matcher matcher4 = pattern4.matcher("+91 9486584620");
+        if (matcher4.matches())
+            System.out.println("Valid Mobile Number");
+        else
+            System.out.println("Invalid Mobile Number");
     }
 }
