@@ -34,5 +34,12 @@ public class UserRegistrationProblem {
             System.out.println("Valid Mobile Number");
         else
             System.out.println("Invalid Mobile Number");
+//UC5:
+        Pattern pattern5 = Pattern.compile("^[a-z0-9]{8,}");
+        Matcher matcher5 = pattern5.matcher("mypassword123");
+        if (matcher5.matches())
+            System.out.println("Valid Password-Rule1");
+        else
+            System.out.println("Invalid Password-Rule1");
     }
 }
