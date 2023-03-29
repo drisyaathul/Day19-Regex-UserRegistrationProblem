@@ -49,12 +49,18 @@ public class UserRegistrationProblem {
         else
             System.out.println("Invalid Password-Rule2");
 //UC7:
-        Pattern pattern7 = Pattern.compile("^[A-Za-z0-9]{8,}$");
+        Pattern pattern7 = Pattern.compile("^(?=[a-z]*[A-Z])(?=.*[0-9]).{8,}$");
         Matcher matcher7 = pattern7.matcher("myPassWord123");
         if (matcher7.matches())
             System.out.println("Valid Password-Rule3");
         else
             System.out.println("Invalid Password-Rule3");
-
+//UC8:
+        Pattern pattern8 = Pattern.compile("^(?=[a-z]*[A-Z])(?=.*[0-9])(?=.*[\\W_]).{8,}$");
+        Matcher matcher8 = pattern8.matcher("myPass_Word@123");
+        if (matcher8.matches())
+            System.out.println("Valid Password-Rule4");
+        else
+            System.out.println("Invalid Password-Rule4");
     }
 }
