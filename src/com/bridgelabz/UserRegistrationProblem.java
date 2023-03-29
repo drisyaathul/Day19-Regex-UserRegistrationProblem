@@ -35,15 +35,15 @@ public class UserRegistrationProblem {
         else
             System.out.println("Invalid Mobile Number");
 //UC5:
-        Pattern pattern5 = Pattern.compile("^[a-z0-9]{8,}$");
-        Matcher matcher5 = pattern5.matcher("mypassword123");
+        Pattern pattern5 = Pattern.compile("^[a-z]{8,}$");
+        Matcher matcher5 = pattern5.matcher("mypassword");
         if (matcher5.matches())
             System.out.println("Valid Password-Rule1");
         else
             System.out.println("Invalid Password-Rule1");
 //UC6:
-        Pattern pattern6 = Pattern.compile("^[A-Za-z0-9]{8,}$");
-        Matcher matcher6 = pattern6.matcher("myPassWord123");
+        Pattern pattern6 = Pattern.compile("^[A-Za-z]{8,}$");
+        Matcher matcher6 = pattern6.matcher("myPassWord");
         if (matcher6.matches())
             System.out.println("Valid Password-Rule2");
         else
