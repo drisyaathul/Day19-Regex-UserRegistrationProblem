@@ -20,5 +20,12 @@ public class UserRegistrationProblem {
             System.out.println("Valid LastName");
         else
             System.out.println("Invalid LastName");
+//UC3:
+        Pattern pattern3 = Pattern.compile("^[a-z]*[.][a-z0-9]*([@][a-z]{5}[.][a-z]{3})$");
+        Matcher matcher3 = pattern3.matcher("drisya.athul809@gmail.com");
+        if (matcher3.matches())
+            System.out.println("Valid Email");
+        else
+            System.out.println("Invalid Email");
     }
 }
